@@ -7,6 +7,7 @@ For Adding Bullet Count:
 ### STEP 1: Create a HUD Blueprint:
 i)In the Content Browser, right-click in the desired folder.
 ii)Select Create Basic Asset > Blueprint Class.
+
 iii)In the Class Settings window, search for "HUD" and select it as the parent class. Name the Blueprint (e.g., "GameHUD") and click Create.
 ### STEP 2: Open the GameHUD Blueprint:
 i)Open the GameHUD Blueprint you just created.
@@ -48,10 +49,13 @@ ii)Ensure that the bullet count is displayed on the screen as you interact with 
 ## ALGORITHM:
 ## For Adding Ammo:
 ### STEP 1: Create an ammo actor:
+```
 i)In the Content Browser, right-click in the desired folder.
 ii)Select Create Basic Asset > Blueprint Class.
 iii)In the Class Settings window, search for "Actor" and select it as the parent class. Name the Blueprint (e.g., "AmmoActor") and click Create
+```
 ### STEP 2: Set up the ammo actor:
+```
 i)Open the player's character Blueprint.
 ii)In the Blueprint editor, locate the event that handles the collision or overlaps with the ammo actor.
 iii)Add a new custom event node to handle the interaction.
@@ -59,17 +63,24 @@ iv)Implement logic to increase the bullet count for the player:
 v)Access the player's character or controller reference.
 vi)Increment the bullet count variable or property. Play a sound or visual effect to indicate the pickup.
 vii)Destroy the ammo actor after it has been collected.
+```
 ### STEP 3: Implement the player's interaction with the ammo actor:
+```
 i)In the GameHUD Blueprint, create a variable of the player character's class to store a reference to it.
 ii)To do this, go to the Variables panel and click the "+" button.
 iii)Set the variable type to the class of your player character (e.g., ThirdPersonCharacter).
 iv)Name the variable (e.g., PlayerCharacter).
+```
 ### STEP 4: Place the ammo actor in the level:
+```
 i)Drag and drop the AmmoActor Blueprint into the level where the player can interact with it.
 ii)Adjust its position and orientation as n
+```
 ### STEP 5: Test the ammo pickup functionality:
+```
 i)Compile and save the AmmoActor Blueprint and the player's character Blueprint. Play the game and navigate the player character to the ammo actor.
 ii)Ensure that when the player character overlaps or collides with the ammo actor, the bullet count increases, and the ammo actor disappears
+```
 ## OUTPUT
 ### EVENT GRAPH
 ![image](https://github.com/Shobika187/EXP-05---AMMO-COLLECTION/assets/94508142/d410cf69-e165-4a74-b4d0-6e040e2f42ab)
